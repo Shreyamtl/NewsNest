@@ -29,11 +29,10 @@ const News =(props) => {
     props.setProgress(100);
   }
 
-  useEffect(()=>{
-    // eslint-disable-next-line
+  useEffect(()=>{ 
     document.title = `${capitalizeFirstletter(props.category)} - NewsNest`;
     updateNews();
-  } , [])
+  } , [props.category])
   // const handlePrevClick = async ()=>{
   //   // console.log("prev click")
   //   setPage(page - 1);
